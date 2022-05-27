@@ -15,3 +15,5 @@ df1=df1.drop("Age in Yrs.","Weight in Kgs.","Quarter of Joining")
 df1=df1.withColumnRenamed("Date of Joining","DOJ").withColumnRenamed("Date of Birth","DOB").withColumnRenamed("Age in Company (Years)","Experience(samecompany)") \
             .withColumnRenamed("Last % Hike","Hike").withColumnRenamed("Phone No. ","Mobile")
 
+# Creating a new DataFrame of Required Columns
+df2=df1.select("Emp ID","Name","Gender","E Mail","DOB","DOJ","Mobile","County","Salary")
